@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sider2API 对话</title>
+    <link rel="stylesheet" href="/ui/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Sider2API 对话</h1>
+    </header>
+
+    <div class="container">
+      <div class="messages" id="messages">
+        <div class="empty-state">开始新的对话</div>
+      </div>
+
+      <div class="status" id="status"></div>
+
+      <div class="input-area">
+        <div class="controls">
+          <select id="model">
+            <option value="claude-haiku-4.5">Claude Haiku 4.5</option>
+            <option value="gpt-5-mini">GPT-5 Mini</option>
+            <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
+          </select>
+
+          <label>
+            <input type="checkbox" id="thinking" checked />
+            思考模式
+          </label>
+
+          <label>
+            <input type="checkbox" id="search" />
+            联网搜索
+          </label>
+
+          <button class="clear-btn" id="clear">清除对话</button>
+        </div>
+
+        <div class="input-wrapper">
+          <textarea 
+            id="input" 
+            placeholder="输入消息..." 
+            rows="1"
+          ></textarea>
+          <button class="send-btn" id="send">发送</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // API Token 将由服务器注入
+      const API_TOKEN = '{{API_TOKEN}}';
+    </script>
+    <script src="/ui/app.js"></script>
+  </body>
+</html>
