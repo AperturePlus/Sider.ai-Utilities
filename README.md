@@ -106,6 +106,4 @@ go build -tags=gui -o sider2api.exe ./cmd/sider2api
 
 *Requires `-tags=gui` build flag
 
-## License
 
-MIT
